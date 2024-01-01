@@ -12,7 +12,11 @@ import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import DragIcon from "../icons/drag.svg";
-
+import TitiIcon from "../icons/ti.svg";
+import HUAIcon from "../icons/hua.svg";
+import YonginIcon from "../icons/yong.svg";
+import QuaninIcon from "../icons/quan.svg";
+import GeninIcon from "../icons/gen.svg";
 import Locale from "../locales";
 
 import { useAppConfig, useChatStore } from "../store";
@@ -22,6 +26,8 @@ import {
   MAX_SIDEBAR_WIDTH,
   MIN_SIDEBAR_WIDTH,
   NARROW_SIDEBAR_WIDTH,
+  GO_URL,
+  HUA_URL,
   Path,
   REPO_URL,
 } from "../constant";
@@ -30,6 +36,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { isIOS, useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showConfirm, showToast } from "./ui-lib";
+
+function goBaidu() {
+  window.location.href = 'http://bj.yjie.fun/abc/';
+}
+function goYong() {
+  window.location.href = 'https://999.yjie.fun/';
+}
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -155,10 +168,11 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
-        </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+        <span>天工智能AI</span>
+           <sup className={styles["custom-beta-button"]} data-tauri-drag-region style={{ marginLeft: '3px' }}>正式版2.0.1</sup>
+     </div>
+       <div className={styles["sidebar-sub-title"]}>
+       欢迎您,我是您的多功能AI问答助理~
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -217,6 +231,16 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
+            <a href={GO_URL} target="_blank" rel="noopener noreferrer">
+              <IconButton icon={<TitiIcon />} shadow />
+            </a>
+          </div>
+          <div className={styles["sidebar-action"]}>
+            <a href={HUA_URL} target="_blank" rel="noopener noreferrer">
+              <IconButton icon={<HUAIcon />} shadow />
+            </a>
+          </div>
+          <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
@@ -237,6 +261,31 @@ export function SideBar(props: { className?: string }) {
             shadow
           />
         </div>
+        <div className={styles["sidebar-header-bar"]}>
+       <IconButton
+         icon={<YonginIcon />}
+         text="产品试用"
+         className={styles["sidebar-bar-button"]}
+         onClick={goYong}
+         shadow
+      />
+       <IconButton
+         icon={<GeninIcon />}
+         text="查看更多"
+         className={styles["sidebar-bar-button"]}
+         onClick={goBaidu}
+         shadow
+      />
+      </div>
+      <div className={styles["sidebar-header-bar"]}>
+   <IconButton
+      icon={<QuaninIcon />}
+      text="授权产品"
+      className={styles["sidebar-bar-button"]}
+      onClick={() => navigate(Path.Auth, { state: { fromHome: true } })}
+      shadow
+   />
+</div>
       </div>
 
       <div
