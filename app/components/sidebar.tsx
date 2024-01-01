@@ -201,7 +201,31 @@ export function SideBar(props: { className?: string }) {
           shadow
         />
       </div>
-
+        <div className={styles["sidebar-header-bar"]}>
+       <IconButton
+         icon={<YonginIcon />}
+         text="产品试用"
+         className={styles["sidebar-bar-button"]}
+         onClick={goYong}
+         shadow
+      />
+       <IconButton
+         icon={<GeninIcon />}
+         text="查看更多"
+         className={styles["sidebar-bar-button"]}
+         onClick={goBaidu}
+         shadow
+      />
+      </div>
+      <div className={styles["sidebar-header-bar"]}>
+   <IconButton
+      icon={<QuaninIcon />}
+      text="授权产品"
+      className={styles["sidebar-bar-button"]}
+      onClick={() => navigate(Path.Auth, { state: { fromHome: true } })}
+      shadow
+   />
+</div>
       <div
         className={styles["sidebar-body"]}
         onClick={(e) => {
@@ -261,31 +285,6 @@ export function SideBar(props: { className?: string }) {
             shadow
           />
         </div>
-        <div className={styles["sidebar-header-bar"]}>
-       <IconButton
-         icon={<YonginIcon />}
-         text="产品试用"
-         className={styles["sidebar-bar-button"]}
-         onClick={goYong}
-         shadow
-      />
-       <IconButton
-         icon={<GeninIcon />}
-         text="查看更多"
-         className={styles["sidebar-bar-button"]}
-         onClick={goBaidu}
-         shadow
-      />
-      </div>
-      <div className={styles["sidebar-header-bar"]}>
-   <IconButton
-      icon={<QuaninIcon />}
-      text="授权产品"
-      className={styles["sidebar-bar-button"]}
-      onClick={() => navigate(Path.Auth, { state: { fromHome: true } })}
-      shadow
-   />
-</div>
       </div>
 
       <div
