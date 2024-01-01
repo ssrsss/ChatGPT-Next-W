@@ -7,15 +7,15 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+      ? "检测到无效授权码，请前往[设置](/#/settings)页检查授权码是否填写正确。"
+      : "> 功能:绘画、聊天、编程、写作、论文生成、图表绘制、文档阅读、图片分析等\n\n> 客服微信:Yueyi_Wife\n> 客服QQ:2337971460\n> 付款时务必备注联系方式(可正常搜索添加的～)\n\n- 🔑您的卡号似乎未正确填写或错误：[立即查看](/#/auth)\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n> 🍟邀请好友购买5元及以上额度,邀请人可获取2$",
   },
   Auth: {
-    Title: "需要密码",
-    Tips: "管理员开启了密码验证，请在下方填入访问码",
-    SubTips: "或者输入你的 OpenAI 或 Google API 密钥",
+    Title: "设备未授权",
+    Tips: "使用前请先设备验证，请在下方填入授权码",
+    SubTips: "验证后可使用本产品全部功能",
     Input: "在此处填写访问码",
-    Confirm: "确认",
+    Confirm: "确认授权",
     Later: "稍后再说",
   },
   ChatItem: {
@@ -44,8 +44,8 @@ const cn = {
       Edit: "编辑",
     },
     Commands: {
-      new: "新建聊天",
-      newm: "从面具新建聊天",
+      new: "New Chat",
+      newm: "从应用新建聊天",
       next: "下一个聊天",
       prev: "上一个聊天",
       clear: "清除上下文",
@@ -60,25 +60,25 @@ const cn = {
         dark: "深色模式",
       },
       Prompt: "快捷指令",
-      Masks: "所有面具",
+      Masks: "所有应用",
       Clear: "清除聊天",
       Settings: "对话设置",
-      EnablePlugins: "开启插件",
-      DisablePlugins: "关闭插件",
+      EnablePlugins: "插件状态:关闭",
+      DisablePlugins: "插件状态:开启",
     },
     Rename: "重命名对话",
-    Typing: "正在输入…",
+    Typing: "对方正在输入…",
     Input: (submitKey: string) => {
       var inputHints = `${submitKey} 发送`;
       if (submitKey === String(SubmitKey.Enter)) {
         inputHints += "，Shift + Enter 换行";
       }
-      return inputHints + "，/ 触发补全，: 触发命令";
+      return inputHints + "";
     },
     Send: "发送",
     Config: {
       Reset: "清除记忆",
-      SaveAs: "存为面具",
+      SaveAs: "存为应用",
     },
     IsContext: "预设提示词",
   },
@@ -94,8 +94,8 @@ const cn = {
       SubTitle: "可以导出 Markdown 文本或者 PNG 图片",
     },
     IncludeContext: {
-      Title: "包含面具上下文",
-      SubTitle: "是否在消息中展示面具上下文",
+      Title: "包含应用上下文",
+      SubTitle: "是否在消息中展示应用上下文",
     },
     Steps: {
       Select: "选取",
@@ -121,7 +121,7 @@ const cn = {
     ResetConfirm: "确认清空历史摘要？",
   },
   Home: {
-    NewChat: "新的聊天",
+    NewChat: "New Chat",
     DeleteChat: "确认删除选中的对话？",
     DeleteToast: "已删除会话",
     Revert: "撤销",
@@ -220,36 +220,36 @@ const cn = {
 
       LocalState: "本地数据",
       Overview: (overview: any) => {
-        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个面具`;
+        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个应用`;
       },
       ImportFailed: "导入失败",
     },
     Mask: {
       Splash: {
-        Title: "面具启动页",
-        SubTitle: "新建聊天时，展示面具启动页",
+        Title: "应用启动页",
+        SubTitle: "新建聊天时，展示应用启动页",
       },
       Builtin: {
-        Title: "隐藏内置面具",
-        SubTitle: "在所有面具列表中隐藏内置面具",
+        Title: "隐藏内置应用",
+        SubTitle: "在所有应用列表中隐藏内置应用",
       },
     },
     Prompt: {
       Disable: {
-        Title: "禁用提示词自动补全",
-        SubTitle: "在输入框开头输入 / 即可触发自动补全",
+        Title: "禁用快捷指令",
+        SubTitle: "在输入框开头输入 / 即可触发",
       },
-      List: "自定义提示词列表",
+      List: "自定义快捷指令列表",
       ListCount: (builtin: number, custom: number) =>
         `内置 ${builtin} 条，用户定义 ${custom} 条`,
       Edit: "编辑",
       Modal: {
-        Title: "提示词列表",
+        Title: "快捷指令列表",
         Add: "新建",
-        Search: "搜索提示词",
+        Search: "搜索快捷指令",
       },
       EditModal: {
-        Title: "编辑提示词",
+        Title: "编辑快捷指令",
       },
     },
     HistoryCount: {
@@ -288,13 +288,13 @@ const cn = {
       OpenAI: {
         ApiKey: {
           Title: "API Key",
-          SubTitle: "使用自定义 OpenAI Key 绕过密码访问限制",
-          Placeholder: "OpenAI API Key",
+          SubTitle: "使用自定义 OpenAI Key",
+          Placeholder: "sk-xxxxxxx",
         },
 
         Endpoint: {
           Title: "接口地址",
-          SubTitle: "除默认地址外，必须包含 http(s)://",
+          SubTitle: "http(s)://",
         },
       },
       Azure: {
@@ -314,48 +314,31 @@ const cn = {
           SubTitle: "选择指定的部分版本",
         },
       },
-      Google: {
-        ApiKey: {
-          Title: "接口密钥",
-          SubTitle: "使用自定义 Google AI Studio API Key 绕过密码访问限制",
-          Placeholder: "Google AI Studio API Key",
-        },
-
-        Endpoint: {
-          Title: "接口地址",
-          SubTitle: "样例：",
-        },
-
-        ApiVerion: {
-          Title: "接口版本 (gemini-pro api version)",
-          SubTitle: "选择指定的部分版本",
-        },
-      },
       CustomModel: {
-        Title: "自定义模型名",
-        SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
+        Title: "自定义模型",
+        SubTitle: "增加自定义模型可选项",
       },
     },
 
-    Model: "模型 (model)",
+    Model: "新建聊天默认模型",
     Temperature: {
-      Title: "随机性 (temperature)",
+      Title: "随机性",
       SubTitle: "值越大，回复越随机",
     },
     TopP: {
-      Title: "核采样 (top_p)",
+      Title: "核采样",
       SubTitle: "与随机性类似，但不要和随机性一起更改",
     },
     MaxTokens: {
-      Title: "单次回复限制 (max_tokens)",
+      Title: "单次回复限制",
       SubTitle: "单次交互所用的最大 Token 数",
     },
     PresencePenalty: {
-      Title: "话题新鲜度 (presence_penalty)",
+      Title: "话题新鲜度",
       SubTitle: "值越大，越有可能扩展到新话题",
     },
     FrequencyPenalty: {
-      Title: "频率惩罚度 (frequency_penalty)",
+      Title: "频率惩罚度",
       SubTitle: "值越大，越有可能降低重复字词",
     },
     Plugin: {
@@ -374,13 +357,13 @@ const cn = {
     },
   },
   Store: {
-    DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    DefaultTopic: "New Chat",
+    BotHello: "你好,有什么可以帮助您的吗？\n\n> 功能:绘画、聊天、编程、写作、论文生成、图表绘制、文档阅读、图片分析等\n\n> 客服微信:Yueyi_Wife\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n> 🍟邀请好友购买5元及以上额度,邀请人可获取2$",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
       Topic:
-        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，不要加粗，如果没有主题，请直接返回“闲聊”",
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回“闲聊”",
       Summarize:
         "简要总结一下对话内容，用作后续的上下文提示 prompt，控制在 200 字以内",
     },
@@ -401,9 +384,9 @@ const cn = {
     Revert: "恢复上下文",
   },
   Plugin: {
-    Name: "插件",
+    Name: "插件列表",
     Page: {
-      Title: "预设插件",
+      Title: "全部插件",
       SubTitle: (count: number) => `${count} 个预设插件`,
       Search: "搜索插件",
       Create: "新建",
@@ -420,17 +403,17 @@ const cn = {
       Download: "下载预设",
       Clone: "克隆预设",
     },
-    RuntimeWarning: "仅在非Vercel环境部署时可用",
+    RuntimeWarning: "此插件待开放",
   },
   FineTuned: {
     Sysmessage: "你是一个助手",
   },
   Mask: {
-    Name: "面具",
+    Name: "App Store",
     Page: {
-      Title: "预设角色面具",
-      SubTitle: (count: number) => `${count} 个预设角色定义`,
-      Search: "搜索角色面具",
+      Title: "预设应用",
+      SubTitle: (count: number) => `${count} 个应用`,
+      Search: "搜索应用",
       Create: "新建",
     },
     Item: {
@@ -443,13 +426,13 @@ const cn = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
-      Download: "下载预设",
-      Clone: "克隆预设",
+        `编辑预设应用 ${readonly ? "（只读）" : ""}`,
+      Download: "下载应用",
+      Clone: "克隆应用",
     },
     Config: {
-      Avatar: "角色头像",
-      Name: "角色名称",
+      Avatar: "应用头像",
+      Name: "应用名称",
       Sync: {
         Title: "使用全局设置",
         SubTitle: "当前对话是否使用全局模型设置",
@@ -460,8 +443,8 @@ const cn = {
         SubTitle: "隐藏后预设对话不会出现在聊天界面",
       },
       Share: {
-        Title: "分享此面具",
-        SubTitle: "生成此面具的直达链接",
+        Title: "分享此应用",
+        SubTitle: "生成此应用的直达链接",
         Action: "复制链接",
       },
     },
@@ -471,8 +454,8 @@ const cn = {
     Skip: "直接开始",
     NotShow: "不再展示",
     ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    Title: "海量的ChatGPT应用",
+    SubTitle: "或在几秒钟内创建属于自己的应用",
     More: "查看全部",
   },
 
