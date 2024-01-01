@@ -1,7 +1,9 @@
 export const OWNER = "Hk-Gosuto";
 export const REPO = "ChatGPT-Next-Web-LangChain";
-export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
-export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
+export const GO_URL = `http://bj.yjie.fun/zt/`;
+export const HUA_URL = `https://cs.aidou.asia/`;
+export const REPO_URL = `http://12322.yjie.fun/`;
+export const ISSUE_URL = `http://12322.yjie.fun/`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const RELEASE_URL = `${REPO_URL}/releases`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
