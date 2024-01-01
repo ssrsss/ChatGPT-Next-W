@@ -321,24 +321,6 @@ const en: LocaleType = {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
       },
-      Google: {
-        ApiKey: {
-          Title: "API Key",
-          SubTitle:
-            "Bypass password access restrictions using a custom Google AI Studio API Key",
-          Placeholder: "Google AI Studio API Key",
-        },
-
-        Endpoint: {
-          Title: "Endpoint Address",
-          SubTitle: "Example:",
-        },
-
-        ApiVerion: {
-          Title: "API Version (gemini-pro api version)",
-          SubTitle: "Select a specific part version",
-        },
-      },
     },
 
     Model: "Model",
