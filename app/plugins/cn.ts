@@ -22,6 +22,17 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     onlyNodeRuntime: false,
   },
   {
+    name: "DALL·E",
+    toolName: "dalle_image_generator",
+    lang: "cn",
+    description:
+      "DALL·E-3绘画(一张$0.04)。指令：画一个xxx",
+    builtin: true,
+    createdAt: 1694703673000,
+    enable: false,
+    onlyNodeRuntime: false,
+  },
+  {
     name: "科研计算搜索引擎",
     toolName: "wolfram_alpha",
     lang: "cn",
@@ -60,17 +71,6 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
       "可以从网页中提取信息或总结其内容。例子:可搜索到的网址+要求",
     builtin: true,
     createdAt: 1693744292000,
-    enable: false,
-    onlyNodeRuntime: false,
-  },
-    {
-    name: "DALL·E",
-    toolName: "dalle_image_generator",
-    lang: "cn",
-    description:
-      "DALL·E-3绘画。",
-    builtin: true,
-    createdAt: 1694703673000,
     enable: false,
     onlyNodeRuntime: false,
   },
