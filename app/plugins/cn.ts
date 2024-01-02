@@ -32,6 +32,16 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     enable: false,
     onlyNodeRuntime: false,
   },
+ {
+    name: "维基百科",
+    toolName: "WikipediaQueryRun",
+    lang: "cn",
+    description: "维基百科在线搜索助手。例子:在wiki查找+内容",
+    builtin: true,
+    createdAt: 1694235989000,
+    enable: false,
+    onlyNodeRuntime: false,
+   },
   {
     name: "Arxiv",
     toolName: "arxiv",
@@ -53,16 +63,17 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     enable: false,
     onlyNodeRuntime: false,
   },
-  {
-    name: "维基百科",
-    toolName: "WikipediaQueryRun",
+    {
+    name: "DALL·E",
+    toolName: "dalle_image_generator",
     lang: "cn",
-    description: "维基百科在线搜索助手。例子:在wiki查找+内容",
+    description:
+      "DALL·E-3绘画。",
     builtin: true,
-    createdAt: 1694235989000,
+    createdAt: 1694703673000,
     enable: false,
     onlyNodeRuntime: false,
-   },
+  },
    {
     name: "Stable Diffusion",
     toolName: "stable_diffusion_image_generator",
@@ -71,17 +82,6 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
       "Stable Diffusion绘图",
     builtin: true,
     createdAt: 1688899480510,
-    enable: false,
-    onlyNodeRuntime: true,
-  },
-  {
-    name: "DALL·E",
-    toolName: "dalle_image_generator",
-    lang: "cn",
-    description:
-      "DALL·E-3绘画。",
-    builtin: true,
-    createdAt: 1694703673000,
     enable: false,
     onlyNodeRuntime: true,
   },
