@@ -34,10 +34,10 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
     return (
       <div className="no-dark">
         <Image
-          src="/Partying face.png"
+          src="/EMOJI-63.png"
           alt="Gemini Bot Icon"
-          width={30}
-          height={30}
+          width={20}
+          height={20}
           className="user-avatar"
         />
       </div>
