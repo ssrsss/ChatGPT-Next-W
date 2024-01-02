@@ -75,12 +75,10 @@ export const EXPORT_MESSAGE_CLASS_NAME = "export-markdown";
 export enum ServiceProvider {
   OpenAI = "OpenAI",
   Azure = "Azure",
-  Google = "Google",
 }
 
 export enum ModelProvider {
   GPT = "GPT",
-  GeminiPro = "GeminiPro",
 }
 
 export const OpenaiPath = {
@@ -92,13 +90,6 @@ export const OpenaiPath = {
 
 export const Azure = {
   ExampleEndpoint: "https://{resource-url}/openai/deployments",
-};
-
-export const Google = {
-  ExampleEndpoint: "https://generativelanguage.googleapis.com",
-  ChatPath: "v1/models/gemini-pro:generateContent",
-
-  // /api/openai/v1/chat/completions
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
@@ -120,15 +111,6 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 };
 
 export const DEFAULT_MODELS = [
-  {
-    name: "gemini-pro",
-    available: true,
-    provider: {
-      id: "google",
-      providerName: "Google",
-      providerType: "google",
-    },
-  },
   {
     name: "bing",
     available: true,
