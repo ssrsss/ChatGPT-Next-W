@@ -51,6 +51,10 @@ import {
   OnDragEndResponder,
 } from "@hello-pangea/dnd";
 
+function goBaidu() {
+  window.location.href = '#/chat';
+}
+
 // drag and drop helper function
 function reorder<T>(list: T[], startIndex: number, endIndex: number): T[] {
   const result = [...list];
@@ -455,25 +459,9 @@ export function MaskPage() {
           <div className="window-actions">
             <div className="window-action-button">
               <IconButton
-                icon={<DownloadIcon />}
-                bordered
-                onClick={downloadAll}
-                text={Locale.UI.Export}
-              />
-            </div>
-            <div className="window-action-button">
-              <IconButton
-                icon={<UploadIcon />}
-                text={Locale.UI.Import}
-                bordered
-                onClick={() => importFromFile()}
-              />
-            </div>
-            <div className="window-action-button">
-              <IconButton
                 icon={<CloseIcon />}
                 bordered
-                onClick={() => navigate(-1)}
+                onClick={goBaidu}
               />
             </div>
           </div>
