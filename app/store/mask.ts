@@ -38,9 +38,7 @@ export const createEmptyMask = () =>
     lang: getLang(),
     builtin: false,
     createdAt: Date.now(),
-    usePlugins: /^gpt(?!.*03\d{2}$).*$/.test(
-      useAppConfig.getState().modelConfig.model,
-    ),
+    usePlugins: false,
   }) as Mask;
 
 export const useMaskStore = createPersistStore(
