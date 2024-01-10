@@ -403,12 +403,11 @@
   max-width: 100%;
   margin-top: 10px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgb(79, 114, 231);
   padding: 10px;
   font-size: 14px;
   user-select: text;
-  word-break: break-word;
-  border: var(--border-in-light);
+  border: rgba(77, 9, 236, 0.767);
   position: relative;
   transition: all ease 0.3s;
 }
@@ -428,7 +427,7 @@
 }
 
 .chat-message-user > .chat-message-container > .chat-message-item {
-  background-color: var(--second);
+  background-color: rgba(67, 96, 200, 0.806);
 
   &:hover {
     min-width: 0;
