@@ -41,7 +41,7 @@ function goBaidu() {
   window.location.href = 'http://bj.yjie.fun/abc/';
 }
 function goYong() {
-  window.location.href = 'https://3.aidou.asia/';
+  window.location.href = 'https://gpt4.yjie.fun/';
 }
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
