@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,有什么可以帮助您的吗？\n\n> 功能:绘画、聊天、编程、写作、论文生成、图表绘制、文档阅读、图片分析等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n> 🍟邀请好友购买5元及以上额度,邀请人可获取2$\n\n> 🎉喜迎2024，与GPT-4一起开启智能未来~\n活动期间天工智能AI公益版GPT4模型可无限制免费使用,使用时请切换GPT4模型\n地址：[立即切换公益版](https://999.yjie.fun/)",
+    BotHello: "你好,有什么可以帮助您的吗？\n\n> 功能:绘画、聊天、编程、写作、论文生成、图表绘制、文档阅读、图片分析等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n> 🍟邀请好友购买5元及以上额度,邀请人可获取2$",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
