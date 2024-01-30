@@ -119,7 +119,34 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
 {
+    name: "gemini-pro",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
     name: "bing",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+      {
+    name: "text-embedding-3-small",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+      {
+    name: "text-embedding-3-large",
     available: true,
     provider: {
       id: "openai",
@@ -129,6 +156,15 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "gpt-4-0125-preview",
     available: true,
     provider: {
       id: "openai",
@@ -165,6 +201,15 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+    {
+    name: "gpt-3.5-turbo-0125",
     available: true,
     provider: {
       id: "openai",
