@@ -6,15 +6,14 @@ const isApp = !!getClientConfig()?.isApp;
 const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
-    Unauthorized: isApp
-      ? "检测到无效授权码，请前往[设置](/#/settings)页检查授权码是否填写正确。"
-      : "> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n> 付款时务必备注联系方式(可正常搜索添加的～)\n\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n\n- 🔑您的卡号似乎未正确填写或错误：[立即查看](/#/auth)",
+    Unauthorized:
+      "你好,有什么可以帮助您的吗？\n> 没有授权码？立即免费领取授权码：[立即授权](/#/auth)\n\n> 对话前请先授权设备：[立即领取](http://youx.yjie.fun/1/)",
   },
   Auth: {
     Title: "设备未授权",
     Tips: "使用前请先设备验证，请在下方填入授权码",
-    SubTips: "验证后可使用本产品全部功能",
-    Input: "在此处填写访问码",
+    SubTips: "使用前请先验证,验证后可使用本产品全部功能",
+    Input: "此项无需填写",
     Confirm: "确认授权",
     Later: "稍后再说",
   },
@@ -87,8 +86,8 @@ const cn = {
     Copy: "全部复制",
     Download: "下载文件",
     Share: "分享到 ShareGPT",
-    MessageFromYou: "用户",
-    MessageFromChatGPT: "ChatGPT",
+    MessageFromYou: "来自你的消息",
+    MessageFromChatGPT: "来自 ChatGPT 的消息",
     Format: {
       Title: "导出格式",
       SubTitle: "可以导出 Markdown 文本或者 PNG 图片",
@@ -163,12 +162,12 @@ const cn = {
     },
 
     Update: {
-      Version: (x: string) => `当前版本：${x}`,
-      IsLatest: "已是最新版本",
-      CheckUpdate: "检查更新",
-      IsChecking: "正在检查更新...",
-      FoundUpdate: (x: string) => `发现新版本：${x}`,
-      GoToUpdate: "前往更新",
+      Version: (x: string) => `轻工具`,
+      IsLatest: "分享好用免费的轻工具",
+      CheckUpdate: "立即前往",
+      IsChecking: "加载中...",
+      FoundUpdate: (x: string) => `分享好用免费的轻工具`,
+      GoToUpdate: "立即前往",
     },
     SendKey: "发送键",
     Theme: "主题",
@@ -182,8 +181,8 @@ const cn = {
       SubTitle: "根据对话内容生成合适的标题",
     },
     Sync: {
-      CloudState: "云端数据",
-      NotSyncYet: "还没有进行过同步",
+      CloudState: "云端聊天数据",
+      NotSyncYet: "此功能非专业无需改动",
       Success: "同步成功",
       Fail: "同步失败",
 
@@ -218,9 +217,9 @@ const cn = {
         },
       },
 
-      LocalState: "本地数据",
+      LocalState: "本地聊天数据",
       Overview: (overview: any) => {
-        return `${overview.chat} 次对话，${overview.message} 条消息，${overview.prompt} 条提示词，${overview.mask} 个应用`;
+        return `备份全部聊天数据`;
       },
       ImportFailed: "导入失败",
     },
@@ -260,6 +259,11 @@ const cn = {
       Title: "历史消息长度压缩阈值",
       SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
     },
+    Token: {
+      Title: "您的Key🔑",
+      SubTitle: "您的设备授权码",
+      Placeholder: "例：sk-xxxx",
+    },
 
     Usage: {
       Title: "余额查询",
@@ -270,68 +274,31 @@ const cn = {
       Check: "重新检查",
       NoAccess: "输入 API Key 或访问密码查看余额",
     },
-
-    Access: {
-      AccessCode: {
-        Title: "访问密码",
-        SubTitle: "管理员已开启加密访问",
-        Placeholder: "请输入访问密码",
-      },
-      CustomEndpoint: {
-        Title: "自定义接口",
-        SubTitle: "是否使用自定义 Azure 或 OpenAI 服务",
-      },
-      Provider: {
-        Title: "模型服务商",
-        SubTitle: "切换不同的服务商",
-      },
-      OpenAI: {
-        ApiKey: {
-          Title: "API Key",
-          SubTitle: "使用自定义 OpenAI Key",
-          Placeholder: "sk-xxxxxxx",
-        },
-
-        Endpoint: {
-          Title: "接口地址",
-          SubTitle: "http(s)://",
-        },
-      },
-      Azure: {
-        ApiKey: {
-          Title: "接口密钥",
-          SubTitle: "使用自定义 Azure Key 绕过密码访问限制",
-          Placeholder: "Azure API Key",
-        },
-
-        Endpoint: {
-          Title: "接口地址",
-          SubTitle: "样例：",
-        },
-
-        ApiVerion: {
-          Title: "接口版本 (azure api version)",
-          SubTitle: "选择指定的部分版本",
-        },
-      },
-      CustomModel: {
-        Title: "自定义模型",
-        SubTitle: "增加自定义模型可选项",
-      },
+    AccessCode: {
+      Title: "访问密码",
+      SubTitle: "管理员已开启加密访问",
+      Placeholder: "请输入访问密码",
     },
-
-    Model: "新建聊天默认模型",
+    Endpoint: {
+      Title: "接口地址(非必填)",
+      SubTitle: "http(s)://",
+    },
+    CustomModel: {
+      Title: "自定义模型(非必填)",
+      SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
+    },
+    Model: "模型选择",
     Temperature: {
-      Title: "随机性",
+      Title: "随机性 (temperature)",
       SubTitle: "值越大，回复越随机",
     },
     TopP: {
-      Title: "核采样",
+      Title: "核采样 (top_p)",
       SubTitle: "与随机性类似，但不要和随机性一起更改",
     },
     MaxTokens: {
-      Title: "单次回复限制",
-      SubTitle: "单次交互所用的最大 Token 数",
+      Title: "单次对话字数限制",
+      SubTitle: "单次对话最高字数/上限15000",
     },
     PresencePenalty: {
       Title: "话题新鲜度",
@@ -358,7 +325,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,有什么可以帮助您的吗？\n\n> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买：[立即购买](http://bj.yjie.fun/gm/)\n- 💰额度扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦模型使用对照表：[立即查看](http://rr.yjie.fun/a/)\n> 🍟邀请好友购买5元及以上额度,邀请人可获取2$",
+    BotHello: "你好,有什么可以帮助您的吗？\n\n> 免费无限制使用gpt3.5，4.0模型",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
@@ -380,14 +347,14 @@ const cn = {
     Toast: (x: any) => `包含 ${x} 条预设提示词`,
     Edit: "当前对话设置",
     Add: "新增一条对话",
-    Clear: "上下文已清除",
-    Revert: "恢复上下文",
+    Clear: "对话记录已清除",
+    Revert: "恢复对话记录",
   },
   Plugin: {
     Name: "插件列表",
     Page: {
       Title: "全部插件",
-      SubTitle: (count: number) => `${count} 个预设插件`,
+      SubTitle: (count: number) => `${count} 个插件`,
       Search: "搜索插件",
       Create: "新建",
     },
@@ -399,21 +366,20 @@ const cn = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `编辑预设插件 ${readonly ? "（只读）" : ""}`,
+        `编辑插件 ${readonly ? "（只读）" : ""}`,
       Download: "下载预设",
       Clone: "克隆预设",
     },
-    RuntimeWarning: "此插件待开放",
   },
   FineTuned: {
     Sysmessage: "你是一个助手",
   },
   Mask: {
-    Name: "App Store",
+    Name: "APP Store",
     Page: {
-      Title: "预设应用",
-      SubTitle: (count: number) => `${count} 个应用`,
-      Search: "搜索应用",
+      Title: "预设GPT应用",
+      SubTitle: (count: number) => `${count} 个ChatGPT应用`,
+      Search: "搜索GPT应用",
       Create: "新建",
     },
     Item: {
@@ -470,15 +436,12 @@ const cn = {
     Close: "关闭",
     Create: "新建",
     Edit: "编辑",
-    Export: "导出",
-    Import: "导入",
+    Export: "立即备份",
+    Import: "备份导入",
     Sync: "同步",
     Config: "配置",
   },
   Exporter: {
-    Description: {
-      Title: "只有清除上下文之后的消息会被展示",
-    },
     Model: "模型",
     Messages: "消息",
     Topic: "主题",
