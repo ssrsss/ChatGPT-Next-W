@@ -13,7 +13,6 @@ import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import DragIcon from "../icons/drag.svg";
 import TitiIcon from "../icons/ti.svg";
-import HUAIcon from "../icons/hua.svg";
 import YonginIcon from "../icons/yong.svg";
 import QuaninIcon from "../icons/quan.svg";
 import GeninIcon from "../icons/gen.svg";
@@ -27,7 +26,6 @@ import {
   MIN_SIDEBAR_WIDTH,
   NARROW_SIDEBAR_WIDTH,
   GO_URL,
-  HUA_URL,
   Path,
   REPO_URL,
 } from "../constant";
@@ -257,11 +255,6 @@ export function SideBar(props: { className?: string }) {
           <div className={styles["sidebar-action"]}>
             <a href={GO_URL} target="_blank" rel="noopener noreferrer">
               <IconButton icon={<TitiIcon />} shadow />
-            </a>
-          </div>
-          <div className={styles["sidebar-action"]}>
-            <a href={HUA_URL} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<HUAIcon />} shadow />
             </a>
           </div>
           <div className={styles["sidebar-action"]}>
