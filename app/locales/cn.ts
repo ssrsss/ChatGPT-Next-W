@@ -8,7 +8,7 @@ const cn = {
   Error: {
     Unauthorized: isApp
       ? "检测到无效授权码，请前往[设置](/#/settings)页检查授权码是否填写正确。"
-      : "> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n> 付款时务必备注联系方式(可正常搜索添加的～)\n\n- 🧧额度充值卡购买(1元400万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦各模型使用方法对照表：[立即查看](http://rr.yjie.fun/a/)\n\n- 🔑您的卡号似乎未正确填写或错误：[立即查看](/#/auth)",
+      : "> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n> 付款时务必备注联系方式(可正常搜索添加的～)\n\n- 🧧额度充值卡购买(1元400万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n\n- 🔑您的卡号似乎未正确填写或错误：[立即查看](/#/auth)",
   },
   Auth: {
     Title: "设备未授权",
@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,有什么可以帮助您的？\n\n> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买(1元400万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💦各模型使用方法对照表：[立即查看](http://rr.yjie.fun/a/)",
+    BotHello: "你好,有什么可以帮助您的？\n\n> 功能:聊天、编程、写作、论文生成、图表绘制等\n\n> 客服微信:wovw0222M\n> 客服QQ:2337971460\n\n- 🧧额度充值卡购买(1元400万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
