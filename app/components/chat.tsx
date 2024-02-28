@@ -509,7 +509,7 @@ export function ChatActions(props: {
         }
       }
     };
-    if (currentModel === "gpt-4-vision-preview") {
+    if (currentModel === "gemini-pro") {
       window.addEventListener("paste", onPaste);
       return () => {
         window.removeEventListener("paste", onPaste);
@@ -580,7 +580,7 @@ export function ChatActions(props: {
 
         {config.pluginConfig.enable &&
           /^gpt(?!.*03\d{2}$).*$/.test(currentModel) &&
-          currentModel != "gpt-4-vision-preview" && (
+          currentModel != "gemini-pro" && (
             <ChatAction
               onClick={switchUsePlugins}
               text={
@@ -591,7 +591,7 @@ export function ChatActions(props: {
               icon={usePlugins ? <EnablePluginIcon /> : <DisablePluginIcon />}
             />
           )}
-        {currentModel == "gpt-4-vision-preview" && (
+        {currentModel == "gemini-pro" && (
           <ChatAction
             onClick={selectImage}
             text="选择图片"
@@ -1382,7 +1382,7 @@ function _Chat() {
                       defaultShow={i >= messages.length - 6}
                     />
                   </div>
-                  {!isUser && message.model == "gpt-4-vision-preview" && (
+                  {!isUser && message.model == "gemini-pro" && (
                     <div
                       className={[
                         styles["chat-message-actions"],
