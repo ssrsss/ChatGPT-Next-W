@@ -29,7 +29,7 @@ export const DEFAULT_CONFIG = {
   lastUpdate: Date.now(), // timestamp, to merge state
 
   submitKey: isMacOS() ? SubmitKey.MetaEnter : SubmitKey.CtrlEnter,
-  avatar: "1f3c2",
+  avatar: "1f37c",
   fontSize: 12,
   theme: Theme.Light as Theme,
   tightBorder: true,
@@ -46,7 +46,7 @@ export const DEFAULT_CONFIG = {
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
-    model: "gpt-3.5-turbo-16k" as ModelType,
+    model: "gpt-3.5-turbo-1106" as ModelType,
     temperature: 0.5,
     top_p: 1,
     max_tokens: 12000000,
