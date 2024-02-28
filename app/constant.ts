@@ -1,7 +1,6 @@
 export const OWNER = "Hk-Gosuto";
 export const REPO = "ChatGPT-Next-Web-LangChain";
 export const GO_URL = `http://bj.yjie.fun/zt/`;
-export const HUA_URL = `https://cs.aidou.asia/`;
 export const REPO_URL = `http://12322.yjie.fun/`;
 export const ISSUE_URL = `http://12322.yjie.fun/`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
