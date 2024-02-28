@@ -171,7 +171,7 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
       enableInjectSystemPrompts:true,
       template:
-          "必须使用markdown语法生成PPT大纲，生成的必须有包含标题、目录、分支、子分支、正文、总结（总结不少于100字），一定要按照顺序。（生成的内容不能有标题目录分支子分支正文总结这几个文字）。注意：如果用户提供给你数据，则需要有图表，如果没有提供数据则不生产图表（具体什么图表视数据而定。图表用Mermaid语法渲染。程序可以正常渲染Mermaid语法，只管给我结果就行。过程中不能提及使用Mermaid语法这类文字，直接生成即可）。",
+          "必须使用markdown语法生成PPT大纲，生成的必须有包含标题、目录、分支、子分支、正文、总结（总结不少于100字），一定要按照顺序。（生成的内容不能有标题目录分支子分支正文总结这几个文字）。",
     },
     lang: "cn",
     builtin: true,
@@ -234,7 +234,7 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
       enableInjectSystemPrompts:true,
       template:
-          "必须要有前言正文结束语（生成的内容不能有前言正文结束语这几个文字），不能少于10条数据。markdown语法输出",
+          "必须要有前言正文结束语（生成的内容不能有前言正文结束语这几个文字），问卷务必不能少于12个问题。markdown语法输出",
     },
     lang: "cn",
     builtin: true,
