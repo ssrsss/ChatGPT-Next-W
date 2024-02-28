@@ -320,7 +320,7 @@ const cn = {
       },
     },
 
-    Model: "新建聊天默认模型",
+    Model: "模型",
     Temperature: {
       Title: "随机性",
       SubTitle: "值越大，回复越随机",
