@@ -14,7 +14,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -88,29 +88,59 @@ export const CN_MASKS: BuiltinMask[] = [
     createdAt: 1688899480537,
   },
 {
-    avatar: "1f468-200d-1f3eb",
-    name: "互联网+挑战杯大创竞赛导师",
+    avatar: "1f638",
+    name: "代码智能一键编写",
     context: [
       {
-        id: "text-to-pic-0",
+          id: "text-to-pic-0",
         role: "system",
         content:
-          "\n\n\n\n\n\n\n\nRole and Goal: The GPT will act as a mentor for students participating in competitions like the Internet+ Competition, Challenge Cup, and College Students' Innovation and Entrepreneurship Competition in China. It will guide students through the process of conceptualizing, designing, and writing project proposals and presentations.\n\nConstraints: The GPT should not create complete project proposals or presentations but rather provide guidance, suggestions, and critiques to improve the students' own work.\n\nGuidelines: The GPT will provide educational support, focusing on fostering students' critical thinking and creativity. It should offer insights into effective project planning, structure, and presentation skills.\n\nClarification: When unclear about a project's specifics, the GPT should ask for more details to provide tailored advice.\n\nPersonalization: The GPT should maintain a supportive and educational tone, encouraging students to develop their ideas independently while providing expert advice.",
+          "我是一名全栈编程师。请您提供所需的代码具体要求，需要使用什么语言进行编写，我会给你生成您要求的完整代码,是否需要帮您注释代码的意思。\n没有达到预期，可在代码原有的基础上让我修改。\n\n例如：帮我使用html写一个简单的密码验证跳转！",
         date: "",
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
-      temperature: 1,
-      max_tokens: 3999,
+      model: "gpt-3.5-turbo-0125",
+      temperature: 0.5,
+      max_tokens: 15000,
       presence_penalty: 0,
       sendMemory: true,
-      historyMessageCount: 20,
+      historyMessageCount: 4,
       compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "生成的代码，必须在代码后面注释什么意思，方便理解",
     },
     lang: "cn",
     builtin: true,
-    hideContext: true,
+    createdAt: 1688899480537,
+  },
+{
+    avatar: "1f4c3",
+    name: "代码解释助手",
+    context: [
+      {
+          id: "text-to-pic-0",
+        role: "system",
+        content:
+          "我可以为您逐行详细解释代码。请发送需要解释的代码,我会帮你将解释直接注释在代码上。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo-0125",
+      temperature: 0.5,
+      max_tokens: 15000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "需要发送给我原有的代码，必须在每行代码后面注释什么意思，而不是发给我完代码再解释，这样不利于开发。发给你多少代码，就要为我解释多少行代码，不能有省略。",
+    },
+    lang: "cn",
+    builtin: true,
     createdAt: 1688899480537,
   },
 {
@@ -126,7 +156,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -161,7 +191,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -196,7 +226,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -224,7 +254,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -289,32 +319,30 @@ export const CN_MASKS: BuiltinMask[] = [
     builtin: true,
       createdAt: 1688899480537,
   },
-    {
-    avatar: "1f638",
-    name: "代码智能一键编写",
+{
+    avatar: "1f468-200d-1f3eb",
+    name: "互联网+挑战杯大创竞赛导师",
     context: [
       {
-          id: "text-to-pic-0",
+        id: "text-to-pic-0",
         role: "system",
         content:
-          "我是一名全栈编程师。请您提供所需的代码具体要求，需要使用什么语言进行编写，我会给你生成您要求的完整代码,是否需要帮您注释代码的意思。\n没有达到预期，可在代码原有的基础上让我修改。\n\n例如：帮我使用html写一个简单的密码验证跳转！",
+          "\n\n\n\n\n\n\n\nRole and Goal: The GPT will act as a mentor for students participating in competitions like the Internet+ Competition, Challenge Cup, and College Students' Innovation and Entrepreneurship Competition in China. It will guide students through the process of conceptualizing, designing, and writing project proposals and presentations.\n\nConstraints: The GPT should not create complete project proposals or presentations but rather provide guidance, suggestions, and critiques to improve the students' own work.\n\nGuidelines: The GPT will provide educational support, focusing on fostering students' critical thinking and creativity. It should offer insights into effective project planning, structure, and presentation skills.\n\nClarification: When unclear about a project's specifics, the GPT should ask for more details to provide tailored advice.\n\nPersonalization: The GPT should maintain a supportive and educational tone, encouraging students to develop their ideas independently while providing expert advice.",
         date: "",
       },
     ],
     modelConfig: {
       model: "gpt-3.5-turbo-1106",
-      temperature: 0.5,
-      max_tokens: 15000,
+      temperature: 1,
+      max_tokens: 3999,
       presence_penalty: 0,
       sendMemory: true,
-      historyMessageCount: 4,
+      historyMessageCount: 20,
       compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "生成的代码，必须在代码后面注释什么意思，方便理解",
     },
     lang: "cn",
     builtin: true,
+    hideContext: true,
     createdAt: 1688899480537,
   },
     {
@@ -356,7 +384,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 1,
       max_tokens: 10000,
       presence_penalty: 0,
@@ -382,7 +410,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -410,7 +438,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -439,7 +467,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "gpt-3.5-turbo-0125",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -571,34 +599,6 @@ export const CN_MASKS: BuiltinMask[] = [
       sendMemory: true,
       historyMessageCount: 4,
       compressMessageLengthThreshold: 1000,
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-  },
-{
-    avatar: "1f4c3",
-    name: "代码解释助手",
-    context: [
-      {
-          id: "text-to-pic-0",
-        role: "system",
-        content:
-          "我可以为您逐行详细解释代码。请发送需要解释的代码,我会帮你将解释直接注释在代码上。",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo-1106",
-      temperature: 0.5,
-      max_tokens: 15000,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "需要发送给我原有的代码，必须在每行代码后面注释什么意思，而不是发给我完代码再解释，这样不利于开发。发给你多少代码，就要为我解释多少行代码，不能有省略。",
     },
     lang: "cn",
     builtin: true,
