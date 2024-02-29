@@ -839,9 +839,9 @@
 
 .markdown-body div .highlight pre,
 .markdown-body div pre {
-  padding: 16px 16px 8px 16px;
+  padding: 30px 30px 30px 16px;
   overflow: auto;
-  font-size: 85%;
+  font-size: 93%;
   line-height: 1.45;
   border-radius: 6px;
   direction: ltr;
@@ -853,13 +853,32 @@
   max-width: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: scroll;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
+  overflow: auto;
+  font-size: 90%;
+  line-height: 1.45;
+  border-radius: 6px;
+  direction: ltr;
 }
 
+.markdown-body div pre::after {
+  content: '•';
+  position: absolute;
+  top: -5px;
+  left: 9px; /* 调整第二个圆点的位置 */
+  color: #FFBD2E; /* 第二个圆点的颜色 */
+  margin-right: 4px; /* 调整圆点间的间距 */
+  font-size: 30px; /* 设置字符大小 */
+}
+
+.markdown-body div pre::before {
+  content: '•';
+  position: absolute;
+  top: -5px;
+  left: 25px; /* 调整第三个圆点的位置 */
+  color: #27C93F; /* 第三个圆点的颜色 */
+  margin-right: 4px; /* 调整圆点间的间距 */
+  font-size: 30px; /* 设置字符大小 */
+}
 .markdown-body div .csv-data td,
 .markdown-body div .csv-data th {
   padding: 5px;
