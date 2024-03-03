@@ -169,11 +169,11 @@ export function SessionConfigModel(props: { onClose: () => void }) {
             <p style={{ fontSize: "14px" }}>
               1.使用此功能的前提模型应切换为：gpt-3.5-turbo-1106
               <br /><br />
-              2.点击新增数据，将&quot;<span style={{ color: 'red', fontWeight: 'bold' }}>user</span>&quot;改为&quot;<span style={{ color: 'red', fontWeight: 'bold' }}>system</span>&quot;，随后将你需要修改或阅读的内容复制进输入框
+              2.点击新增一条数据，随后将你需要GPT阅读或修改的内容复制进输入框
               <br /><br />
-              3.点击右上角X按钮，返回聊天，告诉GPT您的述求
+              3.点击右上角X按钮，返回聊天，然后告诉GPT您的述求，正常聊天即可
               <br /><br />
-              4.GPT即可根据你给出的数据，给出你想要的结果
+              4.GPT即会根据你给出的数据，给出你想要的结果
               <br /><br />
               
               <span style={{ color: 'blue', fontWeight: 'bold' }}>功能优势：免去发送时的字数限制问题，省去一段一段发送的麻烦<br />修改论文，编写论文，长文章的好帮手~</span>
