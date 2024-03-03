@@ -62,7 +62,7 @@ const cn = {
       Prompt: "快捷指令",
       Masks: "所有应用",
       Clear: "清除聊天",
-      Settings: "对话设置",
+      Settings: "超长对话",
       EnablePlugins: "插件状态:关闭",
       DisablePlugins: "插件状态:开启",
     },
@@ -378,10 +378,10 @@ const cn = {
   },
   Context: {
     Toast: (x: any) => `包含 ${x} 条预设提示词`,
-    Edit: "当前对话设置",
-    Add: "新增一条对话",
-    Clear: "上下文已清除",
-    Revert: "恢复上下文",
+    Edit: "超长对话设置",
+    Add: "新增一条索引数据",
+    Clear: "聊天记录已清除,上方对话作废，已开启新对话",
+    Revert: "恢复聊天记录",
   },
   Plugin: {
     Name: "插件列表",
