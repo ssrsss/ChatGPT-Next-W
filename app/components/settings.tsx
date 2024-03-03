@@ -18,7 +18,7 @@ import ConfirmIcon from "../icons/confirm.svg";
 import ConnectionIcon from "../icons/connection.svg";
 import CloudSuccessIcon from "../icons/cloud-success.svg";
 import CloudFailIcon from "../icons/cloud-fail.svg";
-
+const shouldShowComponent = false;
 import {
   Input,
   List,
@@ -285,6 +285,7 @@ function CheckButton() {
   if (!couldCheck) return null;
 
   return (
+    
     <IconButton
       text={Locale.Settings.Sync.Config.Modal.Check}
       bordered
@@ -493,41 +494,6 @@ function SyncItems() {
   return (
     <>
       <List>
-        <ListItem
-          title={Locale.Settings.Sync.CloudState}
-          subTitle={
-            syncStore.lastProvider
-              ? `${new Date(syncStore.lastSyncTime).toLocaleString()} [${
-                  syncStore.lastProvider
-                }]`
-              : Locale.Settings.Sync.NotSyncYet
-          }
-        >
-          <div style={{ display: "flex" }}>
-            <IconButton
-              icon={<ConfigIcon />}
-              text={Locale.UI.Config}
-              onClick={() => {
-                setShowSyncConfigModal(true);
-              }}
-            />
-            {couldSync && (
-              <IconButton
-                icon={<ResetIcon />}
-                text={Locale.UI.Sync}
-                onClick={async () => {
-                  try {
-                    await syncStore.sync();
-                    showToast(Locale.Settings.Sync.Success);
-                  } catch (e) {
-                    showToast(Locale.Settings.Sync.Fail);
-                    console.error("[Sync]", e);
-                  }
-                }}
-              />
-            )}
-          </div>
-        </ListItem>
 
         <ListItem
           title={Locale.Settings.Sync.LocalState}
@@ -718,7 +684,7 @@ export function Settings() {
               ))}
             </Select>
           </ListItem>
-
+          {shouldShowComponent && (
           <ListItem title={Locale.Settings.Theme}>
             <Select
               value={config.theme}
@@ -734,8 +700,7 @@ export function Settings() {
                 </option>
               ))}
             </Select>
-          </ListItem>
-
+          </ListItem>)}
           <ListItem title={Locale.Settings.Lang.Name}>
             <Select
               value={getLang()}
@@ -769,7 +734,7 @@ export function Settings() {
               }
             ></InputRange>
           </ListItem>
-
+          {shouldShowComponent && (
           <ListItem
             title={Locale.Settings.AutoGenerateTitle.Title}
             subTitle={Locale.Settings.AutoGenerateTitle.SubTitle}
@@ -784,8 +749,8 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
-
+          </ListItem>)}
+          {shouldShowComponent && (
           <ListItem
             title={Locale.Settings.SendPreviewBubble.Title}
             subTitle={Locale.Settings.SendPreviewBubble.SubTitle}
@@ -800,11 +765,11 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem>)}
         </List>
 
         <SyncItems />
-
+        {shouldShowComponent && (
         <List>
           <ListItem
             title={Locale.Settings.Mask.Splash.Title}
@@ -822,7 +787,7 @@ export function Settings() {
               }
             ></input>
           </ListItem>
-
+          {shouldShowComponent && (
           <ListItem
             title={Locale.Settings.Mask.Builtin.Title}
             subTitle={Locale.Settings.Mask.Builtin.SubTitle}
@@ -837,8 +802,8 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
-        </List>
+          </ListItem>)}
+        </List>)}
 
         <List>
           <ListItem
@@ -1069,7 +1034,7 @@ export function Settings() {
               )}
             </ListItem>
           ) : null}
-
+{shouldShowComponent && (
           <ListItem
             title={Locale.Settings.Access.CustomModel.Title}
             subTitle={Locale.Settings.Access.CustomModel.SubTitle}
@@ -1084,7 +1049,7 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem>)}
         </List>
 
         <List>
@@ -1101,7 +1066,7 @@ export function Settings() {
         {shouldShowPromptModal && (
           <UserPromptModal onClose={() => setShowPromptModal(false)} />
         )}
-
+{shouldShowComponent && (
         <List>
           <PluginConfigList
             pluginConfig={config.pluginConfig}
@@ -1111,7 +1076,7 @@ export function Settings() {
               config.update((config) => (config.pluginConfig = pluginConfig));
             }}
           />
-        </List>
+        </List>)}
 
         <DangerItems />
       </div>
