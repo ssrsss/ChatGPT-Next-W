@@ -35,7 +35,7 @@ import {
 import { Avatar, AvatarPicker } from "./emoji";
 import Locale, { AllLangs, ALL_LANG_OPTIONS, Lang } from "../locales";
 import { useNavigate } from "react-router-dom";
-
+const shouldShowComponent = false;
 import chatStyle from "./chat.module.scss";
 import { useEffect, useState } from "react";
 import { copyToClipboard, downloadAs, readFromFile } from "../utils";
@@ -109,7 +109,7 @@ export function MaskConfig(props: {
           props.updateMask((mask) => (mask.context = context));
         }}
       />
-
+{shouldShowComponent && (
       <List>
         <ListItem title={Locale.Mask.Config.Avatar}>
           <Popover
@@ -201,15 +201,15 @@ export function MaskConfig(props: {
             ></input>
           </ListItem>
         ) : null}
-      </List>
-
+      </List>)}
+      {shouldShowComponent && (
       <List>
         <ModelConfigList
           modelConfig={{ ...props.mask.modelConfig }}
           updateConfig={updateConfig}
         />
         {props.extraListItems}
-      </List>
+      </List>)}
     </>
   );
 }
