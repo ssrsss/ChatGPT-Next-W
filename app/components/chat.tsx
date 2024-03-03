@@ -584,7 +584,13 @@ export function ChatActions(props: {
             }
           />
         )}
-
+{props.hitBottom && (
+          <ChatAction
+            onClick={props.showPromptModal}
+            text={Locale.Chat.InputActions.Settings}
+            icon={<SettingsIcon />}
+          />
+        )}
         {showModelSelector && (
           <Selector
             defaultSelectedValue={currentModel}
@@ -602,13 +608,6 @@ export function ChatActions(props: {
               });
               showToast(s[0]);
             }}
-          />
-        )}
-        {props.hitBottom && (
-          <ChatAction
-            onClick={props.showPromptModal}
-            text={Locale.Chat.InputActions.Settings}
-            icon={<SettingsIcon />}
           />
         )}
       </div>
