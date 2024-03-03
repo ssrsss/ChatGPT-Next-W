@@ -141,6 +141,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
           />,
         ]}
       >
+        
         <MaskConfig
           mask={session.mask}
           updateMask={(updater) => {
@@ -160,7 +161,28 @@ export function SessionConfigModel(props: { onClose: () => void }) {
               <></>
             )
           }
+          
         ></MaskConfig>
+        <List>
+          <div style={{ padding: "10px 20px" }}>
+            <h4>超长对话专用功能说明</h4>
+            <p style={{ fontSize: "14px" }}>
+              1.使用此功能的前提模型应切换为：gpt-3.5-turbo-1106
+              <br /><br />
+              2.点击新增数据，将"<span style={{ color: 'red', fontWeight: 'bold' }}>user</span>"改为"<span style={{ color: 'red', fontWeight: 'bold' }}>system</span>"，随后将你需要修改或阅读的内容复制进输入框
+              <br /><br />
+              3.点击右上角X按钮，返回聊天，告诉GPT您的述求
+              <br /><br />
+              4.GPT即可根据你给出的数据，给出你想要的结果
+              <br /><br />
+              
+              <span style={{ color: 'blue', fontWeight: 'bold' }}>功能优势：免去发送时的字数限制问题，省去一段一段发送的麻烦<br />修改论文，编写论文，长文章的好帮手~</span>
+
+
+            </p>
+          </div>
+          <div></div>
+      </List>
       </Modal>
     </div>
   );
@@ -177,7 +199,18 @@ function PromptToast(props: {
 
   return (
     <div className={styles["prompt-toast"]} key="prompt-toast">
-      
+      {props.showToast && (
+        <div
+          className={styles["prompt-toast-inner"] + " clickable"}
+          role="button"
+          onClick={() => props.setShowModal(true)}
+        >
+          <BrainIcon />
+          <span className={styles["prompt-toast-content"]}>
+            {Locale.Context.Toast(context.length)}
+          </span>
+        </div>
+      )}
       {props.showModal && (
         <SessionConfigModel onClose={() => props.setShowModal(false)} />
       )}
