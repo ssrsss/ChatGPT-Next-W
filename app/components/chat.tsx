@@ -169,7 +169,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
             <p style={{ fontSize: "14px" }}>
               1.使用此功能的前提模型应切换为：gpt-3.5-turbo-1106
               <br /><br />
-              2.点击新增数据，将"<span style={{ color: 'red', fontWeight: 'bold' }}>user</span>"改为"<span style={{ color: 'red', fontWeight: 'bold' }}>system</span>"，随后将你需要修改或阅读的内容复制进输入框
+              2.点击新增数据，将&quot;<span style={{ color: 'red', fontWeight: 'bold' }}>user</span>&quot;改为&quot;<span style={{ color: 'red', fontWeight: 'bold' }}>system</span>&quot;，随后将你需要修改或阅读的内容复制进输入框
               <br /><br />
               3.点击右上角X按钮，返回聊天，告诉GPT您的述求
               <br /><br />
