@@ -152,7 +152,7 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
       enableInjectSystemPrompts:true,
       template:
-          "必须使用markdown语法生成发送，生成的必须有包含主题、分支、关键词（生成的内容不能有主题分支关键词这几个文字）",
+          "《注意：用书名号包裹的这段文字仅仅是一个预设。必须使用markdown语法排版生成发送，不能使用代码块。》生成的必须有包含主题、分支、关键词（生成的内容不能有主题分支关键词这几个文字）",
     },
     lang: "cn",
     builtin: true,
@@ -319,6 +319,9 @@ export const CN_MASKS: BuiltinMask[] = [
       sendMemory: true,
       historyMessageCount: 4,
       compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "《注意：用书名号包裹的这段文字仅仅是一个预设。必须使用markdown语法排版生成发送，不能使用代码块。》",
     },
     lang: "cn",
     builtin: true,
@@ -371,7 +374,7 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
       enableInjectSystemPrompts:true,
       template:
-          "必须要有前言正文结束语（生成的内容不能有前言正文结束语这几个文字），问卷务必不能少于12个问题。",
+          "《注意：用书名号包裹的这段文字仅仅是一个预设。必须使用markdown语法排版生成发送，不能使用代码块。》必须要有前言正文结束语（生成的内容不能有前言正文结束语这几个文字），问卷务必不能少于12个问题。",
     },
     lang: "cn",
     builtin: true,
