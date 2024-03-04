@@ -78,7 +78,7 @@ const cn = {
     Send: "发送",
     Config: {
       Reset: "清除记忆",
-      SaveAs: "存为应用",
+      SaveAs: "保存知识库",
     },
     IsContext: "预设提示词",
   },
@@ -378,7 +378,7 @@ const cn = {
   },
   Context: {
     Toast: (x: any) => `包含 ${x} 条预设提示词`,
-    Edit: "超长对话设置",
+    Edit: "AI知识库",
     Add: "新增一条索引数据",
     Clear: "聊天记录已清除,上方对话作废，已开启新对话",
     Revert: "恢复聊天记录",
