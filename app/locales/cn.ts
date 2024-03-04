@@ -62,7 +62,7 @@ const cn = {
       Prompt: "快捷指令",
       Masks: "所有应用",
       Clear: "清除聊天",
-      Settings: "超长对话",
+      Settings: "AI知识库",
       EnablePlugins: "插件状态:关闭",
       DisablePlugins: "插件状态:开启",
     },
