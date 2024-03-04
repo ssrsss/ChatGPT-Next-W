@@ -111,34 +111,10 @@ export function MaskConfig(props: {
       />
 
       <List>
-        <ListItem title={Locale.Mask.Config.Avatar}>
-          <Popover
-            content={
-              <AvatarPicker
-                onEmojiClick={(emoji) => {
-                  props.updateMask((mask) => (mask.avatar = emoji));
-                  setShowPicker(false);
-                }}
-              ></AvatarPicker>
-            }
-            open={showPicker}
-            onClose={() => setShowPicker(false)}
-          >
-            <div
-              onClick={() => setShowPicker(true)}
-              style={{ cursor: "pointer" }}
-            >
-              <MaskAvatar
-                avatar={props.mask.avatar}
-                model={props.mask.modelConfig.model}
-              />
-            </div>
-          </Popover>
-        </ListItem>
-        <ListItem title={Locale.Mask.Config.Name}>
+        <ListItem title="知识库名称">
           <input
             type="text"
-            value={props.mask.name}
+            value="知识库"
             onInput={(e) =>
               props.updateMask((mask) => {
                 mask.name = e.currentTarget.value;
@@ -146,62 +122,6 @@ export function MaskConfig(props: {
             }
           ></input>
         </ListItem>
-        {shouldShowComponent && (
-        <ListItem
-          title={Locale.Mask.Config.HideContext.Title}
-          subTitle={Locale.Mask.Config.HideContext.SubTitle}
-        >
-          <input
-            type="checkbox"
-            checked={props.mask.hideContext}
-            onChange={(e) => {
-              props.updateMask((mask) => {
-                mask.hideContext = e.currentTarget.checked;
-              });
-            }}
-          ></input>
-        </ListItem>
-
-        {!props.shouldSyncFromGlobal ? (
-          <ListItem
-            title={Locale.Mask.Config.Share.Title}
-            subTitle={Locale.Mask.Config.Share.SubTitle}
-          >
-            <IconButton
-              icon={<CopyIcon />}
-              text={Locale.Mask.Config.Share.Action}
-              onClick={copyMaskLink}
-            />
-          </ListItem>
-        ) : null}
-
-        {props.shouldSyncFromGlobal ? (
-          <ListItem
-            title={Locale.Mask.Config.Sync.Title}
-            subTitle={Locale.Mask.Config.Sync.SubTitle}
-          >
-            <input
-              type="checkbox"
-              checked={props.mask.syncGlobalConfig}
-              onChange={async (e) => {
-                const checked = e.currentTarget.checked;
-                if (
-                  checked &&
-                  (await showConfirm(Locale.Mask.Config.Sync.Confirm))
-                ) {
-                  props.updateMask((mask) => {
-                    mask.syncGlobalConfig = checked;
-                    mask.modelConfig = { ...globalConfig.modelConfig };
-                  });
-                } else if (!checked) {
-                  props.updateMask((mask) => {
-                    mask.syncGlobalConfig = checked;
-                  });
-                }
-              }}
-            ></input>
-          </ListItem>
-        ) : null})}
       </List>
       {shouldShowComponent && (
       <List>
