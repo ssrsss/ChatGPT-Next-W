@@ -97,7 +97,7 @@ import { getClientConfig } from "../config/client";
 import { useAllModels } from "../utils/hooks";
 import Image from "next/image";
 import { ClientApi } from "../client/api";
-
+const shouldShowComponent = false;
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
 });
@@ -114,6 +114,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
         title={Locale.Context.Edit}
         onClose={() => props.onClose()}
         actions={[
+          {shouldShowComponent && (
           <IconButton
             key="reset"
             icon={<ResetIcon />}
@@ -126,7 +127,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
                 );
               }
             }}
-          />,
+          />,)}
           <IconButton
             key="copy"
             icon={<CopyIcon />}
