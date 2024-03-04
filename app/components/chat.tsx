@@ -165,18 +165,18 @@ export function SessionConfigModel(props: { onClose: () => void }) {
         ></MaskConfig>
         <List>
           <div style={{ padding: "10px 20px" }}>
-            <h4>超长对话专用功能说明</h4>
+            <h4>知识库功能使用帮助</h4>
             <p style={{ fontSize: "14px" }}>
               1.使用此功能的前提模型应切换为：gpt-3.5-turbo-1106
               <br /><br />
-              2.点击新增一条数据，随后将你需要GPT阅读或修改的内容复制进输入框
+              2.点击新增一条数据，随后将你需要GPT阅读、总结、润色、修改的内容复制进输入框
               <br /><br />
               3.点击右上角X按钮，返回聊天，然后告诉GPT您的述求，正常聊天即可
               <br /><br />
               4.GPT即会根据你给出的数据，给出你想要的结果
               <br /><br />
               
-              <span style={{ color: 'blue', fontWeight: 'bold' }}>功能优势：免去发送时的字数限制问题，省去一段一段发送的麻烦<br />修改论文，编写论文，长文章的好帮手~</span>
+              <span style={{ color: 'blue', fontWeight: 'bold' }}>功能优势：免去发送时的字数限制问题，省去一段一段发送的麻烦<br />对超长文档的内容进行分析或者总结改写等<br />修改论文，编写论文，长文章的好帮手~</span>
 
 
             </p>
