@@ -109,7 +109,7 @@ export function MaskConfig(props: {
           props.updateMask((mask) => (mask.context = context));
         }}
       />
-{shouldShowComponent && (
+
       <List>
         <ListItem title={Locale.Mask.Config.Avatar}>
           <Popover
@@ -146,6 +146,7 @@ export function MaskConfig(props: {
             }
           ></input>
         </ListItem>
+        {shouldShowComponent && (
         <ListItem
           title={Locale.Mask.Config.HideContext.Title}
           subTitle={Locale.Mask.Config.HideContext.SubTitle}
@@ -200,8 +201,8 @@ export function MaskConfig(props: {
               }}
             ></input>
           </ListItem>
-        ) : null}
-      </List>)}
+        ) : null})}
+      </List>
       {shouldShowComponent && (
       <List>
         <ModelConfigList
