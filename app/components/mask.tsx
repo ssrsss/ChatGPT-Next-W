@@ -114,7 +114,7 @@ export function MaskConfig(props: {
         <ListItem title="知识库名称">
           <input
             type="text"
-            value="知识库"
+            value={props.mask.name}
             onInput={(e) =>
               props.updateMask((mask) => {
                 mask.name = e.currentTarget.value;
