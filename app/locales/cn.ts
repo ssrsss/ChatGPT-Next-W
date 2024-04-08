@@ -8,7 +8,7 @@ const cn = {
   Error: {
     Unauthorized: isApp
       ? "检测到无效授权码，请前往[设置](/#/settings)页检查授权码是否填写正确。"
-      : "前期购买过的客户key已失效,请联系微信：`wovw0222M`重新免费补卡.\n\n- 🧧额度充值卡购买(1元400万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n\n\n> 您的卡号似乎未正确填写或错误🔑：[立即查看](/#/auth)\n授权后请重新提问~",
+      : "前期(2024/3/1前)购买过的客户key已失效,请联系微信：`wovw0222M`重新免费补卡.\n\n- 🧧额度充值卡购买(1元200万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n\n\n> 您的卡号似乎未正确填写或错误🔑：[立即查看](/#/auth)\n授权后请重新提问~",
   },
   Auth: {
     Title: "设备未授权",
@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n> 试用100万字数额度领取:[立即领取](http://youx.yjie.fun/3)",
+    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n> 天工智能AI思维导图助手:[立即使用](http://99.yjie.fun/#/mind)",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
