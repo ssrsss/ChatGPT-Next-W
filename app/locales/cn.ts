@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)",
+    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n- 💰余额查询（将与2024/4/22前上线）：[待发布]()",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
