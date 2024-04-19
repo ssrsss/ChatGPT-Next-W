@@ -38,12 +38,12 @@ export const CN_MASKS: BuiltinMask[] = [
         id: "text-to-pic-0",
         role: "system",
         content:
-          "**注意：此对话费用消耗较高,请慎重合理使用**\n\n扣费标准:0.3=1000字\n\n日常使用3.5模型足矣,非严谨类型问答，无需使用此模型",
+          "**注意：此对话费用消耗较高,请慎重合理使用\n\n日常使用3.5模型足矣,非严谨类型问答，无需使用此模型",
         date: "",
       },
     ],
     modelConfig: {
-      model: "gpt-4-all",
+      model: "gpt-4-1106-preview",
       temperature: 1,
       max_tokens: 4096,
       presence_penalty: 0,
