@@ -912,7 +912,7 @@ export function Settings() {
                       >
                         <input
                           type="text"
-                          value={accessStore.openaiUrl}
+                          value="https://oneapi.yjie.fun/"
                           placeholder={OPENAI_BASE_URL}
                           onChange={(e) =>
                             accessStore.update(
