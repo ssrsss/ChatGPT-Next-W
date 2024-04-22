@@ -911,16 +911,16 @@ export function Settings() {
                         }
                       >
                         <input
-                          type="text"
-                          value={accessStore.openaiUrl}
-                          placeholder={OPENAI_BASE_URL}
-                          onChange={(e) =>
-                            accessStore.update(
-                              (access) =>
-                                (access.openaiUrl = e.currentTarget.value),
-                            )
-                          }
-                        ></input>
+    type="text"
+    value={accessStore.openaiUrl !== '' ? accessStore.openaiUrl : 'https://oneapi.yjie.fun/'}
+    placeholder={OPENAI_BASE_URL}
+    onChange={(e) =>
+        accessStore.update(
+            (access) =>
+                (access.openaiUrl = e.currentTarget.value !== '' ? e.currentTarget.value : 'https://oneapi.yjie.fun/'),
+        )
+    }
+></input>
                       </ListItem>
                       <ListItem
                         title={Locale.Settings.Access.OpenAI.ApiKey.Title}
