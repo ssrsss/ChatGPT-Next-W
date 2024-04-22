@@ -28,7 +28,7 @@ export enum Path {
 
 export enum ApiPath {
   Cors = "/api/cors",
-  OpenAI = "/api/openai",
+  OpenAI = "https://oneapi.yjie.fun/",
   GoogleAI = "/api/google",
 }
 
