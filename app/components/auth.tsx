@@ -62,7 +62,7 @@ export function AuthPage() {
       <div className={styles["auth-actions"]}>
       <div className={styles["auth-actions"]}>
        <IconButton
-         text="获取授权码"
+         text="购买授权码"
          type="primary"
          onClick={goBaidu}
         />
