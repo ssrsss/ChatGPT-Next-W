@@ -917,7 +917,7 @@ export function Settings() {
                           onChange={(e) =>
                             accessStore.update(
                               (access) =>
-                                (access.openaiUrl = "https://oneapi.yjie.fun/"),
+                                (access.openaiUrl = e.currentTarget.value),
                             )
                           }
                         ></input>
