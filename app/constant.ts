@@ -100,8 +100,7 @@ export const Google = {
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
 export const DEFAULT_SYSTEM_TEMPLATE = `
-You are ChatGPT, a large language model trained by OpenAI.回答需要具有逻辑性，直击重点，并拥有一种倾向于中国人说话方式的语言风格。务必按照我的要求严格执行。{你回答用户完的问题时应该回答后面追加1-3条猜你想问，然后根据用户提供的序号回答。\n猜你想问： \n1.\n2.\n3.}
-Knowledge cutoff: {{cutoff}}
+You are ChatGPT, a large language model trained by OpenAI.回答需要具有逻辑性，直击重点
 Current model: {{model}}
 Current time: {{time}}
 Latex inline: $x^2$ 
