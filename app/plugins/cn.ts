@@ -1,12 +1,74 @@
 import { BuiltinPlugin } from "./typing";
 
 export const CN_PLUGINS: BuiltinPlugin[] = [
- {
-    name: "温馨提示",
+  {
+    name: "联网功能",
+    toolName: "web-search",
+    lang: "cn",
+    description: "搜索引擎的网络搜索工具。例子:搜索一下+内容",
+    builtin: true,
+    createdAt: 1693744292000,
+    enable: true,
+    onlyNodeRuntime: false,
+  },
+  {
+    name: "计算器",
+    toolName: "calculator",
+    lang: "cn",
+    description: "用于计算的工具。例子:计算+内容",
+    builtin: true,
+    createdAt: 1693744292000,
+    enable: true,
+    onlyNodeRuntime: false,
+  },
+  {
+    name: "Arxiv",
+    toolName: "arxiv",
+    lang: "cn",
+    description: "使用Arxiv获取论文信息。例子：人工智能论文",
+    builtin: true,
+    createdAt: 1699265115000,
+    enable: false,
+    onlyNodeRuntime: false,
+  },
+  {
+    name: "网页浏览器",
+    toolName: "web-browser",
+    lang: "cn",
+    description:
+      "可以从网页中提取信息或总结其内容。例子:网址+要求",
+    builtin: true,
+    createdAt: 1693744292000,
+    enable: false,
+    onlyNodeRuntime: false,
+  },
+  {
+    name: "维基百科",
+    toolName: "WikipediaQueryRun",
+    lang: "cn",
+    description: "维基百科在线搜索助手。例子:在wiki查找+内容",
+    builtin: true,
+    createdAt: 1694235989000,
+    enable: false,
+    onlyNodeRuntime: false,
+   },
+   {
+    name: "Stable Diffusion",
+    toolName: "stable_diffusion_image_generator",
+    lang: "cn",
+    description:
+      "Stable Diffusion绘图",
+    builtin: true,
+    createdAt: 1688899480510,
+    enable: false,
+    onlyNodeRuntime: true,
+  },
+  {
+    name: "DALL·E",
     toolName: "dalle_image_generator",
     lang: "cn",
     description:
-      "此版本插件功能已关闭，如需使用请在App Store召唤智能客服,发送“插件助手”唤醒GPT插件版",
+      "DALL·E-3绘画。",
     builtin: true,
     createdAt: 1694703673000,
     enable: false,
