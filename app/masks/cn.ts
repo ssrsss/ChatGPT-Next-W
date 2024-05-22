@@ -30,31 +30,6 @@ export const CN_MASKS: BuiltinMask[] = [
     createdAt: 1688899480537,
     usePlugins: true,
   },
-    {
-    avatar: "1f947",
-    name: "GPT4高级对话",
-    context: [
-      {
-        id: "text-to-pic-0",
-        role: "system",
-        content:
-          "**注意：此对话费用消耗较高,请慎重合理使用\n\n日常使用3.5模型足矣,非严谨类型问答，无需使用此模型",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-4-1106-preview",
-      temperature: 1,
-      max_tokens: 4096,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-  },
 {
     avatar: "1f9fe",
     name: "PDF/Word/Excel文档分析",
@@ -86,6 +61,91 @@ export const CN_MASKS: BuiltinMask[] = [
     lang: "cn",
     builtin: true,
     createdAt: 1688899480537,
+  },
+    {
+    avatar: "1f4c3",
+    name: "代码解释助手",
+    context: [
+      {
+          id: "text-to-pic-0",
+        role: "system",
+        content:
+          "我可以为您逐行详细解释代码。请发送需要解释的代码,我会帮你将解释直接注释在代码上。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "deepseek-coder",
+      temperature: 0.5,
+      max_tokens: 15000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "需要发送给我原有的代码，必须在每行代码后面注释什么意思，而不是发给我完代码再解释，这样不利于开发。发给你多少代码，就要为我解释多少行代码，不能有省略。",
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480537,
+  },
+    {
+    avatar: "1f638",
+    name: "代码智能一键编写",
+    context: [
+      {
+          id: "text-to-pic-0",
+        role: "system",
+        content:
+          "我是一名全栈编程师。请您提供所需的代码具体要求，需要使用什么语言进行编写，我会给你生成您要求的完整代码,是否需要帮您注释代码的意思。\n没有达到预期，可在代码原有的基础上让我修改。\n\n例如：帮我使用html写一个简单的密码验证跳转！",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "deepseek-coder",
+      temperature: 0.5,
+      max_tokens: 15000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "生成的代码，必须在生成的每行代码后面注释什么意思，示例：let fetchState = 0; // 0 not fetch, 1 fetching, 2 done。方便理解",
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480537,
+  },
+    {
+    avatar: "1f50d",
+    name: "智猿答题帮",
+    context: [
+      {
+        id: "text-to-pic-0",
+        role: "system",
+        content:
+          "您好，我是您的专属答题助手，有什么问题可以为您解答吗？",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo-0613",
+      temperature: 0.5,
+      max_tokens: 15000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "回答需要用Duckduck搜索。",
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480537,
+    usePlugins: true,
   },
   {
     avatar: "1f516",
@@ -185,91 +245,6 @@ export const CN_MASKS: BuiltinMask[] = [
     lang: "cn",
     builtin: true,
     createdAt: 1688899480537,
-  },
-  {
-    avatar: "1f4c3",
-    name: "代码解释助手",
-    context: [
-      {
-          id: "text-to-pic-0",
-        role: "system",
-        content:
-          "我可以为您逐行详细解释代码。请发送需要解释的代码,我会帮你将解释直接注释在代码上。",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo-1106",
-      temperature: 0.5,
-      max_tokens: 15000,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "需要发送给我原有的代码，必须在每行代码后面注释什么意思，而不是发给我完代码再解释，这样不利于开发。发给你多少代码，就要为我解释多少行代码，不能有省略。",
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-  },
-    {
-    avatar: "1f638",
-    name: "代码智能一键编写",
-    context: [
-      {
-          id: "text-to-pic-0",
-        role: "system",
-        content:
-          "我是一名全栈编程师。请您提供所需的代码具体要求，需要使用什么语言进行编写，我会给你生成您要求的完整代码,是否需要帮您注释代码的意思。\n没有达到预期，可在代码原有的基础上让我修改。\n\n例如：帮我使用html写一个简单的密码验证跳转！",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo-1106",
-      temperature: 0.5,
-      max_tokens: 15000,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "生成的代码，必须在生成的每行代码后面注释什么意思，示例：let fetchState = 0; // 0 not fetch, 1 fetching, 2 done。方便理解",
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-  },
-  {
-    avatar: "1f50d",
-    name: "智猿答题帮",
-    context: [
-      {
-        id: "text-to-pic-0",
-        role: "system",
-        content:
-          "您好，我是您的专属答题助手，有什么问题可以为您解答吗？",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo-0613",
-      temperature: 0.5,
-      max_tokens: 15000,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "回答需要用Duckduck搜索。",
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-    usePlugins: true,
   },
   {
     avatar: "1f4dc",
