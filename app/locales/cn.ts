@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 💰各模型字数扣除标准：[立即查看](http://bj.yjie.fun/dy/)\n\n有问题请联系官方企业客服(24H在线)：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> 如提示`Failed to fetch`请打开首页-设置-下滑-清除全部数据并重新授权即可。",
+    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 🔖查询您的余额还有多少：[立即查询](http://cx.yjie.fun/)\n\n有问题请联系官方企业客服(24H在线)：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> 如提示`Failed to fetch`请打开首页-设置-下滑-清除全部数据并重新授权即可。",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
