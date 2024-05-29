@@ -14,7 +14,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "gpt-3.5-turbo-1106",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
