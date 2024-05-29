@@ -534,21 +534,7 @@ export function ChatActions(props: {
         )}
         
 
-        <ChatAction
-          onClick={nextTheme}
-          text={Locale.Chat.InputActions.Theme[theme]}
-          icon={
-            <>
-              {theme === Theme.Auto ? (
-                <AutoIcon />
-              ) : theme === Theme.Light ? (
-                <LightIcon />
-              ) : theme === Theme.Dark ? (
-                <DarkIcon />
-              ) : null}
-            </>
-          }
-        />
+        
 
         <ChatAction
           onClick={props.showPromptHints}
@@ -556,22 +542,16 @@ export function ChatActions(props: {
           icon={<PromptIcon />}
         />
 
-        <ChatAction
-          onClick={() => {
-            navigate(Path.Masks);
-          }}
-          text={Locale.Chat.InputActions.Masks}
-          icon={<MaskIcon />}
-        />
+        
 
         <ChatAction
           onClick={() => setShowModelSelector(true)}
-          text={currentModel}
+          text={`当前模型:${currentModel}`}
           icon={<RobotIcon />}
         />
 
         {config.pluginConfig.enable &&
-          /^gpt(?!.*03\d{2}$).*$/.test(currentModel) &&
+          (/(^ChatGPT)|(^Deepseek)/.test(currentModel) &&
           currentModel != "gemini-pro" && (
             <ChatAction
               onClick={switchUsePlugins}
@@ -582,23 +562,8 @@ export function ChatActions(props: {
               }
               icon={usePlugins ? <EnablePluginIcon /> : <DisablePluginIcon />}
             />
-          )}
-        {currentModel == "gemini-pro" && (
-          <ChatAction
-            onClick={selectImage}
-            text="选择图片"
-            icon={<UploadIcon />}
-            innerNode={
-              <input
-                type="file"
-                accept=".png,.jpg,.webp,.jpeg"
-                id="chat-image-file-select-upload"
-                style={{ display: "none" }}
-                onChange={onImageSelected}
-              />
-            }
-          />
-        )}
+          ))}
+        
 {props.hitBottom && (
           <ChatAction
             onClick={props.showPromptModal}
@@ -627,20 +592,7 @@ export function ChatActions(props: {
         )}
       </div>
       <div>
-        <ChatAction
-          text={Locale.Chat.InputActions.Clear}
-          icon={<BreakIcon />}
-          onClick={() => {
-            chatStore.updateCurrentSession((session) => {
-              if (session.clearContextIndex === session.messages.length) {
-                session.clearContextIndex = undefined;
-              } else {
-                session.clearContextIndex = session.messages.length;
-                session.memoryPrompt = ""; // will clear memory
-              }
-            });
-          }}
-        />
+        
       </div>
     </div>
   );
