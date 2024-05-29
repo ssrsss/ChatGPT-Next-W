@@ -14,7 +14,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0125",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -50,7 +50,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4-all",
+      model: "ChatGPT-4-问答模型",
       temperature: 1,
       max_tokens: 4096,
       presence_penalty: 0,
@@ -75,7 +75,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "deepseek-coder",
+      model: "Deepseek-擅长编程",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -103,7 +103,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "deepseek-coder",
+      model: "Deepseek-擅长编程",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -131,7 +131,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -167,7 +167,7 @@ export const CN_MASKS: BuiltinMask[] = [
     },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -203,7 +203,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -231,7 +231,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -259,7 +259,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "ChatGPT-3.5-问答模型",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -287,7 +287,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -315,7 +315,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -340,7 +340,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0613",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -368,7 +368,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -393,7 +393,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -418,7 +418,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 1,
       max_tokens: 3999,
       presence_penalty: 0,
@@ -444,7 +444,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 1,
       max_tokens: 10000,
       presence_penalty: 0,
@@ -470,7 +470,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -495,7 +495,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -520,7 +520,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -545,7 +545,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-16k",
+      model: "Deepseek-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -570,7 +570,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-1106",
+      model: "Deepseek-擅长对话",
       temperature: 1,
       max_tokens: 3500,
       presence_penalty: 0,
