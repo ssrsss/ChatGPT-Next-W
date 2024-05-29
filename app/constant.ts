@@ -145,6 +145,42 @@ export const DEFAULT_MODELS = [
     },
   },
   {
+    name: "Deepseek-擅长编程",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "Deepseek-擅长对话",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "ChatGPT-4-问答模型",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "ChatGPT-3.5-问答模型",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
     name: "gpt-3.5-turbo-0613",
     available: true,
     provider: {
