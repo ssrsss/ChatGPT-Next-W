@@ -145,7 +145,7 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "Deepseek-擅长编程",
+    name: "公益限时免费-擅长对话",
     available: true,
     provider: {
       id: "openai",
@@ -154,7 +154,7 @@ export const DEFAULT_MODELS = [
     },
   },
   {
-    name: "Deepseek-擅长对话",
+    name: "公益限时免费-擅长编程",
     available: true,
     provider: {
       id: "openai",
