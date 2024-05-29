@@ -154,7 +154,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
           <div style={{ padding: "10px 20px" }}>
             <h4>知识库功能使用帮助</h4>
             <p style={{ fontSize: "14px" }}>
-              1.使用此功能的前提模型应切换为：gpt-3.5-turbo-1106
+              1.使用此功能的前提模型应切换为：ChatGPT-3.5-问答模型
               <br /><br />
               2.点击新增一条数据，随后将你需要GPT阅读、总结、润色、修改的内容复制进输入框
               <br /><br />
