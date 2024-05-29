@@ -551,7 +551,7 @@ export function ChatActions(props: {
         />
 
         {config.pluginConfig.enable &&
-          (/(^ChatGPT)|(^Deepseek)|(^gpt)/.test(currentModel) &&
+          (/(^ChatGPT)|(^Deepseek)|(^公益限时免费)|(^gpt)/.test(currentModel) &&
           currentModel != "gemini-pro" && (
             <ChatAction
               onClick={switchUsePlugins}
