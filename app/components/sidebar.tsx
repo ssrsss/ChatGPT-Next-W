@@ -39,7 +39,7 @@ function goBaidu() {
   window.location.href = 'http://bj.yjie.fun/abc/';
 }
 function goYong() {
-  window.location.href = 'http://youx.yjie.fun/3';
+  window.location.href = 'https://ai1.yjie.fun/#/?settings={%22key%22:%22sk-m9mFRZXzmqgXbSvQ53E602Af736448B7954c7e774aAfA732%22,%22url%22:%22https://oneapi.yjie.fun%22}';
 }
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
@@ -202,7 +202,7 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-header-bar"]}>
        <IconButton
          icon={<YonginIcon />}
-         text="产品试用"
+         text="免费体验"
          className={styles["sidebar-bar-button"]}
          onClick={goYong}
          shadow
