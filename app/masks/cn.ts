@@ -14,7 +14,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo-0125",
+      model: "联网问答-不能连续对话",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -22,8 +22,6 @@ export const CN_MASKS: BuiltinMask[] = [
       historyMessageCount: 4,
       compressMessageLengthThreshold: 1000,
       enableInjectSystemPrompts:true,
-      template:
-          "请使用Duckduck搜索。结果必须用markdown语法排版进行处理然后发送给我",
     },
     lang: "cn",
     builtin: true,
