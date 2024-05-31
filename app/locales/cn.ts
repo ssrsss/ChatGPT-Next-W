@@ -8,7 +8,7 @@ const cn = {
   Error: {
     Unauthorized: isApp
       ? "检测到无效授权码，请前往[设置](/#/settings)页检查授权码是否填写正确。"
-      : "> ✅如遇到问题，请联系企业客服：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> ⚡️您的卡号似乎未正确填写或错误：[立即查看](/#/auth)\n- 特惠活动：额度充值卡购买(1元200万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n授权后请重新提问~\n\n![api](https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1717081837917/%E6%96%B0%E5%BB%BA%20XLSX%20%E5%B7%A5%E4%BD%9C%E8%A1%A8_Sheet1.jpg)",
+      : "> ✅如遇到问题，请联系企业客服：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> ⚡️您的卡号似乎未正确填写或错误：[立即查看](/#/auth)\n- 特惠活动：额度充值卡购买(1元200万对话字数)：[立即购买](http://bj.yjie.fun/gm/)\n授权后请重新提问~\n\n![api](https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1717153904253/%E6%96%B0%E5%BB%BA%20XLSX%20%E5%B7%A5%E4%BD%9C%E8%A1%A8_Sheet1(1).jpg)",
   },
   Auth: {
     Title: "设备未授权",
@@ -358,7 +358,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "New Chat",
-    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 🔖查询您的余额还有多少：[立即查询](http://cx.yjie.fun/)\n\n有问题请联系官方企业客服(24H在线)：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> 如提示`Failed to fetch`请打开首页-设置-下滑-清除全部数据并重新授权即可。\n\n![api](https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1717081837917/%E6%96%B0%E5%BB%BA%20XLSX%20%E5%B7%A5%E4%BD%9C%E8%A1%A8_Sheet1.jpg)",
+    BotHello: "你好,尊贵的会员！有什么可以帮助您的吗？\n- 🔖查询您的余额还有多少：[立即查询](http://cx.yjie.fun/)\n\n有问题请联系官方企业客服(24H在线)：[立即微信扫码添加](http://bj.yjie.fun/wx/)\n\n> 如提示`Failed to fetch`请打开首页-设置-下滑-清除全部数据并重新授权即可。\n\n![api](https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1717153904253/%E6%96%B0%E5%BB%BA%20XLSX%20%E5%B7%A5%E4%BD%9C%E8%A1%A8_Sheet1(1).jpg)",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
