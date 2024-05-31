@@ -31,6 +31,35 @@ export const CN_MASKS: BuiltinMask[] = [
     usePlugins: true,
   },
     {
+    avatar: "1f50d",
+    name: "智猿答题帮",
+    context: [
+      {
+        id: "text-to-pic-0",
+        role: "system",
+        content:
+          "您好，我是您的专属答题助手，有什么问题可以为您解答吗？",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo-0125",
+      temperature: 0.5,
+      max_tokens: 15000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+      enableInjectSystemPrompts:true,
+      template:
+          "请使用Duckduck搜索后回答。{你需要遵循以下要求：回答时请不要说明使用的是duckduckgo，直接给出结果即可}",
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480537,
+    usePlugins: true,
+  },
+    {
     avatar: "1f4c3",
     name: "代码解释助手",
     context: [
@@ -85,35 +114,6 @@ export const CN_MASKS: BuiltinMask[] = [
     lang: "cn",
     builtin: true,
     createdAt: 1688899480537,
-  },
-    {
-    avatar: "1f50d",
-    name: "智猿答题帮",
-    context: [
-      {
-        id: "text-to-pic-0",
-        role: "system",
-        content:
-          "您好，我是您的专属答题助手，有什么问题可以为您解答吗？",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
-      temperature: 0.5,
-      max_tokens: 15000,
-      presence_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-      enableInjectSystemPrompts:true,
-      template:
-          "回答需要用Duckduck搜索。",
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480537,
-    usePlugins: true,
   },
   {
     avatar: "1f516",
