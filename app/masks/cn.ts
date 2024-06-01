@@ -9,7 +9,7 @@ export const CN_MASKS: BuiltinMask[] = [
           id: "text-to-pic-0",
         role: "system",
         content:
-          "## 文档网页阅读助手\n\n我可以为您解析网页内容，PDF文档等，例如：阅读wx公众号文章，解析课件等等功能\n\n> **功能使用教程(必看)：**[**立即查看使用教程**](http://cx.yjie.fun/)\n\n\n| 功能列表             | 访问地址 |\n| -------------------- | -------- |\n|文档网页阅读助手 | [立即解析文档](https://udify.app/chat/5wRY2l1kQ2hNIoLj) |\n| PDF文件转换| [立即转换文档](https://smallpdf.com/cn/pdf-converter#r=convert)|\n| PDF文件上传  | [立即上传文件](https://up.ly93.cc/)|",
+          "## 文档网页阅读助手\n\n我可以为您解析网页内容，PDF文档等，例如：阅读wx公众号文章，解析课件等等功能\n\n> **功能使用教程(必看)：**[**立即查看使用教程**](https://2337971460.oss-cn-shanghai.aliyuncs.com/bandicam%202024-06-01%2018-16-03-830.mp4)\n\n\n| 功能列表             | 访问地址 |\n| -------------------- | -------- |\n|文档网页阅读助手 | [立即解析文档](https://udify.app/chat/5wRY2l1kQ2hNIoLj) |\n| PDF文件转换| [立即转换文档](https://smallpdf.com/cn/pdf-converter#r=convert)|\n| PDF文件上传  | [立即上传文件](https://up.ly93.cc/)|",
         date: "",
       },
     ],
