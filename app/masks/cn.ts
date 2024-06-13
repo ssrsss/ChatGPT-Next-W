@@ -14,7 +14,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "公益限时免费-擅长对话",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -189,7 +189,7 @@ export const CN_MASKS: BuiltinMask[] = [
     },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "公益限时免费-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -225,7 +225,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "公益限时免费-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -253,7 +253,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "公益限时免费-擅长对话",
       temperature: 1,
       max_tokens: 15000,
       presence_penalty: 0,
@@ -281,7 +281,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "ChatGPT-3.5-问答模型",
+      model: "公益限时免费-擅长对话",
       temperature: 0.5,
       max_tokens: 15000,
       presence_penalty: 0,
